@@ -3,55 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Простой Лендинг</title>
+    <title>Лендинг без бэкенда</title>
     <link rel="stylesheet" href="styles.css">
-
-    <!-- Yandex.Metrika counter -->
-    <script type="text/javascript">
-        (function(m,e,t,r,i,k,a){
-            m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-            m[i].l=1*new Date();
-            for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-            k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
-        })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=103736930', 'ym');
-    
-        ym(103736930, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", accurateTrackBounce:true, trackLinks:true});
-    </script>
-    <noscript><div><img src="https://mc.yandex.ru/watch/103736930" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-    <!-- /Yandex.Metrika counter -->
-
 </head>
 <body>
     <header class="header">
-        <div class="container">
-            <h1>Добро пожаловать!</h1>
-            <p>Это простой лендинг с чистым дизайном</p>
-            <button id="cta-button">Узнать больше</button>
+        <nav>
+            <a href="#features" class="nav-link">Преимущества</a>
+            <a href="#contacts" class="nav-link">Контакты</a>
+        </nav>
+        <div class="hero">
+            <h1>Простой лендинг</h1>
+            <p>Только фронтенд — никакого бэкенда!</p>
+            <button id="demo-btn">Демо-кнопка</button>
         </div>
     </header>
 
-    <section class="features">
-        <div class="container">
-            <h2>Наши преимущества</h2>
-            <div class="feature">
-                <h3>Быстро</h3>
-                <p>Мы работаем оперативно и без задержек.</p>
+    <section id="features" class="features">
+        <h2>Наши фишки</h2>
+        <div class="feature-cards">
+            <div class="card">
+                <h3>Лёгкость</h3>
+                <p>Не грузим серверы.</p>
             </div>
-            <div class="feature">
-                <h3>Качественно</h3>
-                <p>Используем только проверенные решения.</p>
-            </div>
-            <div class="feature">
-                <h3>Надежно</h3>
-                <p>Гарантируем стабильность и поддержку.</p>
+            <div class="card">
+                <h3>Скорость</h3>
+                <p>Всё работает моментально.</p>
             </div>
         </div>
     </section>
 
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2024 Мой Лендинг. Все права защищены.</p>
-        </div>
+    <section id="contacts" class="contacts">
+        <h2>Как с нами связаться</h2>
+        <p>Пишите на <span class="email">example@test.ru</span></p>
+    </section>
+
+    <footer>
+        <p>© 2024 | Фронтенд-лендинг</p>
     </footer>
 
     <script src="script.js"></script>
