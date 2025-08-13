@@ -1,14 +1,23 @@
-// Обработка клика по кнопке
-document.getElementById('cta-button').addEventListener('click', function() {
-    alert('Спасибо за интерес! Скоро мы с вами свяжемся.');
-});
-
-// Плавная прокрутка при клике на ссылки (если будут добавлены)
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
+// Плавная прокрутка для навигации
+document.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('click', (e) => {
         e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
+        const targetId = link.getAttribute('href');
+        document.querySelector(targetId).scrollIntoView({
             behavior: 'smooth'
         });
+    });
+});
+
+// Демо-кнопка
+document.getElementById('demo-btn').addEventListener('click', () => {
+    alert('Это просто фронтенд — никаких запросов на сервер!');
+});
+
+// Подсветка email при клике
+document.querySelector('.email').addEventListener('click', () => {
+    const email = 'example@test.ru';
+    navigator.clipboard.writeText(email).then(() => {
+        alert('Email скопирован: ' + email);
     });
 });
